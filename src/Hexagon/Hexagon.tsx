@@ -13,6 +13,14 @@ interface HexagonProps {
   fill?: string;
   className?: string;
   children?: React.ReactNode;
+  onMouseEnter?: React.MouseEventHandler<SVGGElement>;
+onMouseOver?: React.MouseEventHandler<SVGGElement>;
+        onMouseLeave?: React.MouseEventHandler<SVGGElement>;
+        onClick?: React.MouseEventHandler<SVGGElement>;
+        onDragStart?: React.DragEventHandler<SVGGElement>;
+        onDragEnd?: React.DragEventHandler<SVGGElement>;
+        onDragOver?: React.DragEventHandler<SVGGElement>;
+        onDrop?: React.DragEventHandler<SVGGElement>;
 }
 
 function Hexagon({
@@ -23,6 +31,14 @@ function Hexagon({
   fill,
   className,
   children,
+  onMouseEnter,
+  onMouseLeave,
+  onMouseOver,
+  onClick,
+  onDrop,
+  onDragOver,
+  onDragEnd,
+  onDragStart
 }: HexagonProps) {
   const { layout, points } = useContext(LayoutContext);
 
@@ -43,6 +59,14 @@ function Hexagon({
     <g
       className={clsx('hexagon-group', className)}
       transform={`translate(${pixel.x}, ${pixel.y})`}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onMouseOver={onMouseOver}
+      onClick={onClick}
+      onDrop={onDrop}
+      onDragOver={onDragOver}
+      onDragEnd={onDragEnd}
+      onDragStart={onDragStart}
     >
       <g className="hexagon">
         <polygon points={points} fill={fillId} style={cellStyle} />

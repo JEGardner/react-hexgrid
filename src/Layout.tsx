@@ -63,7 +63,7 @@ export const LayoutContext = createContext<LayoutContextValue>({
 });
 
 interface LayoutProps {
-  children: React.SVGProps<SVGGElement>;
+  children: React.ReactNode;
   className?: string;
   flat?: boolean;
   origin?: Point;

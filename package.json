@@ -8,7 +8,7 @@
   "author": "Brendon Hudnell",
   "repository": "github:BrendonHudnell/react-hexgrid",
   "keywords": ["Hexagon", "Hex", "Grid"],
-  "homepage": "",
+  "homepage": "https://github.com/BrendonHudnell/react-hexgrid",
   "bugs": "https://github.com/BrendonHudnell/react-hexgrid/issues",
   "scripts": {
     "build": "tsc",
