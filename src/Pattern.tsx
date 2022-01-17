@@ -1,6 +1,6 @@
 import Point from './models/Point';
 
-interface PatternProps {
+export interface PatternProps {
   id: string;
   link: string;
   size?: Point;

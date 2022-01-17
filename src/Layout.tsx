@@ -62,7 +62,7 @@ export const LayoutContext = createContext<LayoutContextValue>({
   points: '',
 });
 
-interface LayoutProps {
+export interface LayoutProps {
   children: React.ReactNode;
   className?: string;
   flat?: boolean;

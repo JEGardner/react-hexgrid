@@ -29,7 +29,7 @@ function getPoints(
     .join('L')}`;
 }
 
-interface PathProps {
+export interface PathProps {
   start?: Hex;
   end?: Hex;
 }

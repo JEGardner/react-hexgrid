@@ -5,7 +5,7 @@ import HexUtils from '../HexUtils';
 import { LayoutContext } from '../Layout';
 import Hex from '../models/Hex';
 
-interface HexagonProps extends React.SVGProps<SVGGElement> {
+export interface HexagonProps extends React.SVGProps<SVGGElement> {
   q: number;
   r: number;
   s: number;

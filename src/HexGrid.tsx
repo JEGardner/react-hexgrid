@@ -1,4 +1,4 @@
-interface HexGridProps {
+export interface HexGridProps {
   width?: string | number;
   height?: string | number;
   viewBox?: string;
