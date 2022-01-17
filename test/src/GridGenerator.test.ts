@@ -1,11 +1,31 @@
 import GridGenerator from '../../src/GridGenerator';
+import Hex from '../../src/models/Hex';
 
-test('getGenerator should work when the request exists', () => {
-  expect(GridGenerator.getGenerator('rectangle')).toBe(GridGenerator.rectangle);
+test('ring should work', () => {
+  expect(GridGenerator.ring(new Hex(0, 0, 0), 1)).toEqual(
+    [
+      { q: -1, r: 1, s: 0 },
+      { q: 0, r: 1, s: -1 },
+      { q: 1, r: 0, s: -1 },
+      { q: 1, r: -1, s: 0 },
+      { q: 0, r: -1, s: 1 },
+      { q: -1, r: 0, s: 1 },
+    ],
+  );
 });
 
-test('getGenerator should work when the request does not exist', () => {
-  expect(GridGenerator.getGenerator('bogus')).toBeNull();
+test('spiral should work', () => {
+  expect(GridGenerator.spiral(new Hex(0, 0, 0), 1)).toEqual(
+    [
+      { q: 0, r: 0, s: 0 },
+      { q: -1, r: 1, s: 0 },
+      { q: 0, r: 1, s: -1 },
+      { q: 1, r: 0, s: -1 },
+      { q: 1, r: -1, s: 0 },
+      { q: 0, r: -1, s: 1 },
+      { q: -1, r: 0, s: 1 },
+    ],
+  );
 });
 
 test('parallelogram should work', () => {

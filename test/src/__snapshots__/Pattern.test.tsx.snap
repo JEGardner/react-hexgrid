@@ -24,16 +24,16 @@ exports[`Pattern should render correctly with custom props 1`] = `
 exports[`Pattern should render correctly with default props 1`] = `
 <defs>
   <pattern
-    height={200}
+    height={10}
     id="test1"
     patternUnits="objectBoundingBox"
-    width={100}
+    width={10}
     x={0}
     y={0}
   >
     <image
-      height={400}
-      width={200}
+      height={20}
+      width={20}
       x={0}
       xlinkHref="http://example.com"
       y={0}

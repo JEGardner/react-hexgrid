@@ -5,7 +5,7 @@ exports[`Path should render correctly 1`] = `
   className="test1"
 >
   <path
-    d="M 17.147302994931888,9.9 L 0,0 "
+    d="M 17.147302994931888,9.9 "
   />
 </g>
 `;
