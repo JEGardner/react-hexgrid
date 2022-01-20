@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useMemo, useState } from 'react';
 
 import HexUtils from '../HexUtils';
 import { LayoutContext } from '../Layout';
@@ -20,12 +20,13 @@ function Hexagon({
   fill,
   className,
   children,
-  ...otherProps
+  ref,
 }: HexagonProps) {
   const { layout, points } = useContext(LayoutContext);
 
   const [hex, setHex] = useState(new Hex(q, r, s));
-  const [pixel, setPixel] = useState(HexUtils.hexToPixel(hex, layout)); // TODO might have to remove initializer and put in a dummy default
+
+  const pixel = useMemo(() => HexUtils.hexToPixel(hex, layout), [hex, layout]);
 
   const fillId = fill ? `url(#${fill})` : undefined;
 
@@ -33,13 +34,9 @@ function Hexagon({
     setHex(new Hex(q, r, s));
   }, [q, r, s]);
 
-  useEffect(() => {
-    setPixel(HexUtils.hexToPixel(hex, layout));
-  }, [hex, layout]);
-
   return (
     <g
-      {...otherProps}
+      ref={ref}
       className={clsx('hexagon-group', className)}
       transform={`translate(${pixel.x}, ${pixel.y})`}
     >
