@@ -36,6 +36,8 @@
     },
     "rules": {
         "react/react-in-jsx-scope": "off",
+        "react/display-name": "off",
+        "react/prop-types": "off",
         "import/order": ["warn", {
             "alphabetize": { "order": "asc" },
             "groups": [ "builtin", "external", "internal", "parent", "sibling" ],

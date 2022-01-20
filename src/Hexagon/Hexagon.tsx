@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useContext, useEffect, useMemo, useState } from 'react';
+import { forwardRef, useContext, useEffect, useMemo, useState } from 'react';
 
 import HexUtils from '../HexUtils';
 import { LayoutContext } from '../Layout';
@@ -12,17 +12,9 @@ export interface HexagonProps extends React.SVGProps<SVGGElement> {
   cellStyle?: React.CSSProperties;
 }
 
-function Hexagon({
-  q,
-  r,
-  s,
-  cellStyle,
-  fill,
-  className,
-  children,
-  ref,
-  ...otherProps
-}: HexagonProps) {
+const Hexagon = forwardRef<SVGGElement, HexagonProps>((props, ref) => {
+  const { q, r, s, fill, className, cellStyle, children, ...otherProps } =
+    props;
   const { layout, points } = useContext(LayoutContext);
 
   const [hex, setHex] = useState(new Hex(q, r, s));
@@ -44,10 +36,11 @@ function Hexagon({
     >
       <g className="hexagon">
         <polygon points={points} fill={fillId} style={cellStyle} />
+
         {children}
       </g>
     </g>
   );
-}
+});
 
 export default Hexagon;
