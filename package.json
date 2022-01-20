@@ -1,6 +1,6 @@
 {
   "name": "@brendonhudnell/react-hexgrid",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Interactive hexagon grids with React bindings",
   "license": "MIT",
   "main": "lib/index.js",
