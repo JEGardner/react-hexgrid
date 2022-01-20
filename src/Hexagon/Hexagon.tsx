@@ -20,7 +20,7 @@ function Hexagon({
   fill,
   className,
   children,
-  ref,
+  ...otherProps
 }: HexagonProps) {
   const { layout, points } = useContext(LayoutContext);
 
@@ -36,7 +36,7 @@ function Hexagon({
 
   return (
     <g
-      ref={ref}
+      {...otherProps}
       className={clsx('hexagon-group', className)}
       transform={`translate(${pixel.x}, ${pixel.y})`}
     >

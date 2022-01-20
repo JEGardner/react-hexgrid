@@ -10,7 +10,8 @@
   "keywords": [
     "Hexagon",
     "Hex",
-    "Grid"
+    "Grid",
+    "React"
   ],
   "homepage": "https://github.com/BrendonHudnell/react-hexgrid",
   "bugs": "https://github.com/BrendonHudnell/react-hexgrid/issues",
