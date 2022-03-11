@@ -1,20 +1,20 @@
 {
-  "name": "@brendonhudnell/react-hexgrid",
+  "name": "@jegardner/react-hexgrid",
   "version": "1.0.7",
   "description": "Interactive hexagon grids with React bindings",
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "author": "Brendon Hudnell",
-  "repository": "github:BrendonHudnell/react-hexgrid",
+  "author": "Jack Gardner",
+  "repository": "github:jegardner/react-hexgrid",
   "keywords": [
     "Hexagon",
     "Hex",
     "Grid",
     "React"
   ],
-  "homepage": "https://github.com/BrendonHudnell/react-hexgrid",
-  "bugs": "https://github.com/BrendonHudnell/react-hexgrid/issues",
+  "homepage": "https://github.com/jegardner/react-hexgrid",
+  "bugs": "https://github.com/jegardner/react-hexgrid/issues",
   "scripts": {
     "build": "tsc",
     "lint": "eslint src --fix",
