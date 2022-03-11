@@ -1,10 +1,9 @@
 {
   "name": "@jegardner/react-hexgrid",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Interactive hexagon grids with React bindings",
   "license": "MIT",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "src/index.ts",
   "author": "Jack Gardner",
   "repository": "github:jegardner/react-hexgrid",
   "keywords": [
@@ -50,6 +49,6 @@
     "clsx": "^1.1.1"
   },
   "files": [
-    "lib/"
+    "src/"
   ]
 }
